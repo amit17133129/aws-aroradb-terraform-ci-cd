@@ -20,19 +20,19 @@ jobs:
       - name: Terraform init
         id: init
         run: cd EU-DEV && terraform init
-        working-directory: ../EU-DEV
+        working-directory: EU-DEV
 
       - name: Terraform validate
         id: validate
         run:  terraform validate
-        working-directory: ../EU-DEV
+        working-directory: EU-DEV
 
       - name: Terraform plan
         id: plan
         run: terraform plan
-        working-directory: ../EU-DEV
+        working-directory: EU-DEV
 
       - name: Terraform apply
         id: apply
         run: terraform destroy -auto-approve
-        working-directory: ../EU-DEV
+        working-directory: EU-DEV
