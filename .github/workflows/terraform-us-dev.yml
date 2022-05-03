@@ -23,12 +23,12 @@ jobs:
 
       - name: Terraform validate
         id: validate
-        run: terraform validate
+        run:  cd EU-DEV && terraform validate
 
       - name: Terraform plan
         id: plan
-        run: terraform plan
+        run: cd EU-DEV && terraform plan
 
       # - name: Terraform apply
       #   id: apply
-      #   run: terraform apply -auto-approve
+      #   run: cd EU-DEV && terraform apply -auto-approve
