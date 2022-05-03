@@ -29,6 +29,6 @@ jobs:
         id: plan
         run: cd EU-DEV && terraform plan
 
-      # - name: Terraform apply
-      #   id: apply
-      #   run: cd EU-DEV && terraform apply -auto-approve
+      - name: Terraform apply
+        id: apply
+        run: cd EU-DEV && terraform apply -auto-approve
