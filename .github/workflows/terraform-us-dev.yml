@@ -20,17 +20,17 @@ jobs:
       - name: Terraform init
         id: init
         run: terraform init
-          working-directory: ./US-DEV
+        working-directory: ./US-DEV
 
       - name: Terraform validate
         id: validate
         run:  terraform validate
-          working-directory: ./US-DEV
+        working-directory: ./US-DEV
  
       - name: Terraform plan
         id: plan
         run: terraform plan
-          working-directory: ./US-DEV
+        working-directory: ./US-DEV
 
 #       # - name: Terraform apply
 #       #   id: apply
