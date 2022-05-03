@@ -19,7 +19,7 @@ jobs:
     
       - name: Terraform init
         id: init
-        run: cd EU-DEV && terraform init
+        run: terraform init
         working-directory: EU-DEV
 
       - name: Terraform validate
