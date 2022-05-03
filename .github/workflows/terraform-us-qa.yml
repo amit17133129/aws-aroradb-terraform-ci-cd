@@ -17,6 +17,18 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
     
-      - name: Terraform Apply
-        id: apply
-        run: cd US-QA && terraform init && terraform validate && terraform plan
+      - name: Terraform init
+        id: init
+        run: cd EU-DEV && terraform init
+
+      - name: Terraform validate
+        id: validate
+        run: terraform validate
+
+      - name: Terraform plan
+        id: plan
+        run: terraform plan
+
+      # - name: Terraform apply
+      #   id: apply
+      #   run: terraform apply -auto-approve
